@@ -1,0 +1,383 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="shortcut icon" href="./imagenes/icono__tvc.png" />
+		<link href="https://fonts.cdnfonts.com/css/vinila-test" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<title>TVC | Tryhard Valorant Cup</title>
+	</head>
+	<body>
+		<div class="body__content">
+			<div class="preloader-container">
+				<div class="logo"><img src="./imagenes/logobk.png" alt="Logo" /></div>
+			</div>
+			<header>
+				<nav class="nav">
+					<div class="navbar">
+						<img src="./imagenes/logo1.png" alt="" width="65vh" class="logo__navbar" />
+						<img src="./imagenes/logo2.png" alt="" width="65vh" class="logo__navbar" />
+						<img src="./imagenes/logo3.png" alt="" width="65vh" class="logo__navbar" />
+						<img src="./imagenes/logo4.png" alt="" width="65vh" class="logo__navbar" />
+						<img src="./imagenes/logo5.png" alt="" width="65vh" class="logo__navbar" />
+						<img src="./imagenes/logo6.png" alt="" width="65vh" class="logo__navbar" />
+						<img src="./imagenes/logo7.png" alt="" width="65vh" class="logo__navbar" />
+						<img src="./imagenes/logo8.png" alt="" width="65vh" class="logo__navbar" />
+						<img src="./imagenes/logobkblanc.png" alt="" width="230vh" class="tvc_icon" />
+						<img src="./imagenes/logo9.png" alt="" width="65vh" class="logo__navbar" />
+						<img src="./imagenes/logo10.png" alt="" width="65vh" class="logo__navbar" />
+						<img src="./imagenes/logo7.png" alt="" width="65vh" class="logo__navbar" />
+						<img src="./imagenes/logo6.png" alt="" width="65vh" class="logo__navbar" />
+						<img src="./imagenes/logo4.png" alt="" width="65vh" class="logo__navbar" />
+						<img src="./imagenes/logo3.png" alt="" width="65vh" class="logo__navbar" />
+						<img src="./imagenes/logo2.png" alt="" width="65vh" class="logo__navbar" />
+						<img src="./imagenes/logo1.png" alt="" width="65vh" class="logo__navbar" />
+					</div>
+					<div class="reposition">
+						<div class="positions">
+							<p onclick="ScrollToServidores()">Servidores</p>
+							<p onclick="ScrollToCartas()">Cartas</p>
+							<p onclick="ScrollToReglas()">Reglas</p>
+							<p onclick="ScrollToBracket()">Bracket</p>
+							<p onclick="ScrollToCapitanes()">Capitanes</p>
+						</div>
+						<div class="stream">
+							<a class="button__stream" href="https://www.twitch.tv/jisusrun" target="_blank">STREAM</a>
+						</div>
+					</div>
+				</nav>
+			</header>
+			<main>
+				<div class="main__container">
+					<div class="contenedor__izquierda">
+						<div class="titulos__izquierda">
+							<h1 class="titulo__principal">Bienvenido a TVC</h1>
+							<h2 class="subtitulo__main">
+								La pagina interactiva oficial de la Tryhard Valorant Cup, donde encontraras tus cartas y eligiras tu servidor.
+							</h2>
+						</div>
+						<div class="cartas__izquierda">
+							<div class="servidores__carta">
+								<h3 class="carta__main__titulo">Seleccion del Servidor de las Partidas</h3>
+								<p class="carta__main__explicacion__servidores">Los servidores seran seleccionados debajo de forma aleatoria entre los equipos.</p>
+								<button class="carta__main__boton__servidor" onclick="ScrollToServidores()">
+									Tu servidor <img src="./imagenes/flecha.png" alt="" width="30px" />
+								</button>
+							</div>
+							<div class="poderes__carta">
+								<h3 class="carta__main__titulo">Seleccion de las cartas de las Partidas</h3>
+								<p class="carta__main__explicacion">Las cartas seran seleccionadas debajo por los jugadores sin saber cual estan eligiendo.</p>
+								<button class="carta__main__boton__cartas" onclick="ScrollToCartas()">
+									Tus cartas <img src="./imagenes/flecha.png" alt="" width="30px" />
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="contenedor__derecha">
+						<div class="jett__image">
+							<img src="./imagenes/jett_no_bk.png" alt="" />
+						</div>
+						<p class="jett__bk">TVC</p>
+					</div>
+				</div>
+				<div class="back-to-top" id="backToTop">
+					<img src="./imagenes/flecha__arriba.png" alt="Subir" />
+				</div>
+				<div class="deph__rectangle">
+					<div class="texto__rectangulo">
+						<h2>Una Experiencia Diferente</h2>
+						<p>
+							Nuestro torneo busca ser algo distinto para Valorant, dirigido a streamers y sus comunidades, presentamos un torneo interactivo y
+							flexible que mediante el uso de cartas especiales.
+						</p>
+					</div>
+				</div>
+				<div class="">
+					<div class="servidores__titulo oculto">
+						<h3>Seleccion de Mapas</h3>
+						<p>A continuacion seleccione los mapas que desea utilizar en el sorteo de mapas y luego presione el boton de "Buscar Mapa".</p>
+					</div>
+					<div id="tp__servidores" class="server__card__container">
+						<div class="glass__server__card oculto" onclick="toggleCard(this)">
+							<img src="./imagenes/sunset.png" alt="" />
+							<button class="servidor-boton">SUNSET</button>
+						</div>
+						<div class="glass__server__card oculto" onclick="toggleCard(this)">
+							<img src="./imagenes/lotus.png" alt="" />
+							<button class="servidor-boton">LOTUS</button>
+						</div>
+						<div class="glass__server__card oculto" onclick="toggleCard(this)">
+							<img src="./imagenes/pearl.png" alt="" />
+							<button class="servidor-boton">PEARL</button>
+						</div>
+						<div class="glass__server__card oculto" onclick="toggleCard(this)">
+							<img src="./imagenes/fracture.png" alt="" />
+							<button class="servidor-boton">FRACTURE</button>
+						</div>
+						<div class="glass__server__card oculto" onclick="toggleCard(this)">
+							<img src="./imagenes/breeze.jpg" alt="" />
+							<button class="servidor-boton">BREEZE</button>
+						</div>
+					</div>
+					<div id="tp__servidores2" class="server__card__container">
+						<div class="glass__server__card oculto" onclick="toggleCard(this)">
+							<img src="./imagenes/icebox.png" alt="" />
+							<button class="servidor-boton">ICEBOX</button>
+						</div>
+						<div class="glass__server__card oculto" onclick="toggleCard(this)">
+							<img src="./imagenes/bind.jpg" alt="" />
+							<button class="servidor-boton">BIND</button>
+						</div>
+						<div class="glass__server__card oculto" onclick="toggleCard(this)">
+							<img src="./imagenes/haven.png" alt="" />
+							<button class="servidor-boton">HAVEN</button>
+						</div>
+						<div class="glass__server__card oculto" onclick="toggleCard(this)">
+							<img src="./imagenes/split.png" alt="" />
+							<button class="servidor-boton">SPLIT</button>
+						</div>
+						<div class="glass__server__card oculto" onclick="toggleCard(this)">
+							<img src="./imagenes/ascent.png" alt="" />
+							<button class="servidor-boton">ASCENT</button>
+						</div>
+					</div>
+					<div class="dizzy">
+						<img src="./imagenes/Dyzzy.png" alt="" />
+					</div>
+				</div>
+				<div class="texto__seleccion">El mapa que se vuelva color celeste sera el ganador.</div>
+				<div class="buscar__container">
+					<div class="buscar__boton"><button onclick="elegirCartaRandom()">Buscar Mapa</button></div>
+					<div class="reiniciar"><button onclick="reiniciarSorteo()">Reiniciar</button></div>
+				</div>
+				<div class="cartas__seccion" id="tp__cartas">
+					<div class="vidrio"></div>
+					<div class="cartas__izquierda__poderes">
+						<div id="container3D" class="oculto"></div>
+					</div>
+					<div class="cartas__derecha__poderes">
+						<div class="cartas__texto oculto">
+							<h3>Sistema de Cartas</h3>
+							<p>
+								Contamos con cartas interactivas que pueden cambiar el curso de las partidas. Poseen un uso especial y son seleccionadas debajo al
+								azar.
+							</p>
+						</div>
+						<div class="cartas__imagen oculto"><img src="./imagenes/cartas__muestra.jpeg" alt="" width="600px" /></div>
+					</div>
+				</div>
+				<div class="mejoras__seleccion__container">
+					<div class="seleccion__titular">
+						<div class="seleccion__titular__texto">
+							<div class="titulo__mejoras oculto"><h3>Cartas Especiales</h3></div>
+							<div class="subtitulo__mejoras oculto"><p>Seleccione una carta a continuacion</p></div>
+						</div>
+					</div>
+					<div class="seleccion__subcontainer">
+						<div class="seleccion__completa">
+							<div class="ultima__carta__izq">
+								<div class="ultima__carta">
+									<div class="ultima__seleccion"><p>Ultima Carta Seleccionada</p></div>
+									<div id="ultima__seleccion__carta"></div>
+								</div>
+								<div class="seleccion__titular__botones">
+									<div class="mezclar__container">
+										<div class="boton__mezclar__container">
+											<button class="boton__mezclar" id="shuffleButton">
+												<span></span>
+												Mezlcar
+												<span></span>
+											</button>
+										</div>
+										<div class="boton__reiniciar__container">
+											<button class="boton__reiniciar__cartas" onClick="window.location.reload()">
+												<span></span>
+												Reiniciar
+												<span></span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="container__total" id="tp__flecha">
+								<div class="container__superior">
+									<div class="mejora__carta" id="card1" data-invisible-card="invisibleCard1">
+										<img src="./imagenes/cartas.png" alt="" />
+									</div>
+									<div class="mejora__carta" id="card2" data-invisible-card="invisibleCard2">
+										<img src="./imagenes/cartas.png" alt="" />
+									</div>
+									<div class="mejora__carta" id="card3" data-invisible-card="invisibleCard3">
+										<img src="./imagenes/cartas.png" alt="" />
+									</div>
+									<div class="mejora__carta" id="card4" data-invisible-card="invisibleCard4">
+										<img src="./imagenes/cartas.png" alt="" />
+									</div>
+									<div class="mejora__carta" id="card5" data-invisible-card="invisibleCard5">
+										<img src="./imagenes/cartas.png" alt="" />
+									</div>
+								</div>
+								<div class="container__inferior">
+									<div class="mejora__carta" id="card6" data-invisible-card="invisibleCard6">
+										<img src="./imagenes/cartas.png" alt="" />
+									</div>
+									<div class="mejora__carta" id="card7" data-invisible-card="invisibleCard7">
+										<img src="./imagenes/cartas.png" alt="" />
+									</div>
+									<div class="mejora__carta" id="card8" data-invisible-card="invisibleCard8">
+										<img src="./imagenes/cartas.png" alt="" />
+									</div>
+									<div class="mejora__carta" id="card9" data-invisible-card="invisibleCard9">
+										<img src="./imagenes/cartas.png" alt="" />
+									</div>
+									<div class="mejora__carta" id="card10" data-invisible-card="invisibleCard10">
+										<img src="./imagenes/cartas.png" alt="" />
+									</div>
+								</div>
+								<div class="container__final">
+									<div class="mejora__carta" id="card11" data-invisible-card="invisibleCard11">
+										<img src="./imagenes/cartas.png" alt="" />
+									</div>
+									<div class="mejora__carta" id="card12" data-invisible-card="invisibleCard12">
+										<img src="./imagenes/cartas.png" alt="" />
+									</div>
+									<div class="mejora__carta" id="card13" data-invisible-card="invisibleCard13">
+										<img src="./imagenes/cartas.png" alt="" />
+									</div>
+									<div class="mejora__carta" id="card14" data-invisible-card="invisibleCard14">
+										<img src="./imagenes/cartas.png" alt="" />
+									</div>
+									<div class="mejora__carta" id="card15" data-invisible-card="invisibleCard15">
+										<img src="./imagenes/cartas.png" alt="" />
+									</div>
+								</div>
+								<div class="invisible__carta" id="invisibleCard1">
+									<img src="./imagenes/carta__invisible1.png" alt="" />
+								</div>
+								<div class="invisible__carta" id="invisibleCard2">
+									<img src="./imagenes/carta__invisible2.png" alt="" />
+								</div>
+								<div class="invisible__carta" id="invisibleCard3">
+									<img src="./imagenes/carta__invisible3.png" alt="" />
+								</div>
+								<div class="invisible__carta" id="invisibleCard4">
+									<img src="./imagenes/carta__invisible4.png" alt="" />
+								</div>
+								<div class="invisible__carta" id="invisibleCard5">
+									<img src="./imagenes/carta__invisible5.png" alt="" />
+								</div>
+								<div class="invisible__carta" id="invisibleCard6">
+									<img src="./imagenes/carta__invisible6.png" alt="" />
+								</div>
+								<div class="invisible__carta" id="invisibleCard7">
+									<img src="./imagenes/carta__invisible7.png" alt="" />
+								</div>
+								<div class="invisible__carta" id="invisibleCard8">
+									<img src="./imagenes/carta__invisible8.png" alt="" />
+								</div>
+								<div class="invisible__carta" id="invisibleCard9">
+									<img src="./imagenes/carta__invisible9.png" alt="" />
+								</div>
+								<div class="invisible__carta" id="invisibleCard10">
+									<img src="./imagenes/carta__invisible10.png" alt="" />
+								</div>
+								<div class="invisible__carta" id="invisibleCard11">
+									<img src="./imagenes/carta__invisible11.png" alt="" />
+								</div>
+								<div class="invisible__carta" id="invisibleCard12">
+									<img src="./imagenes/carta__invisible12.png" alt="" />
+								</div>
+								<div class="invisible__carta" id="invisibleCard13">
+									<img src="./imagenes/carta__invisible13.png" alt="" />
+								</div>
+								<div class="invisible__carta" id="invisibleCard14">
+									<img src="./imagenes/carta__invisible14.png" alt="" />
+								</div>
+								<div class="invisible__carta" id="invisibleCard15">
+									<img src="./imagenes/carta__invisible15.png" alt="" />
+								</div>
+							</div>
+							<p class="cartas__bk">TVC</p>
+							<div class="popup" id="cardPopup"></div>
+						</div>
+					</div>
+					<div class="historial__container">
+						<div class="historial__titulo oculto"><p>Historial de Cartas (Ultimas 6 Cartas)</p></div>
+						<div id="pickedCardsContainer"></div>
+					</div>
+				</div>
+				<div class="capitanesContainer" id="capitanes__tp">
+					<h3>Capitanes</h3>
+				</div>
+				<div class="BracketContainer">
+					<img id="tp__bracket" src="./imagenes/bracket.png" alt="" />
+				</div>
+				<div class="ReglasContainer">
+					<div class="reglas--titulo"><h3>Reglas Del Torneo</h3></div>
+					<div class="reglas--section" id="tp__reglas">
+						<div class="reglas--container--texto">
+							<ul>
+								<li>
+									Antes de cada partida se va a realizar un sorteo del servidor en que se jugara, esto debido a que hay equipos de diferentes países.
+								</li>
+								<li>Cada equipo tendrá que entregar nombre y logo de equipo.</li>
+								<li>Cada equipo debe contar con 6 a 7 jugadores esto por si alguno no se puede presentar el día del partido contar con suplente.</li>
+								<li>Tener el valorant tracker en público con el fin de evitar smurfs y verificar sus rangos.</li>
+								<li>No realizar stream sniping.</li>
+								<li>Todos los que realicen stream colocar mínimo 1 minuto de delay, esto con el fin de evitar el stream sniping.</li>
+								<li>Rango máximo permitido será ascendente (máximo un ascendente por equipo).</li>
+								<li>
+									Antes de cada partida se sorteara 2 cartas por equipo las cuales contendrán beneficios adicionales que se podrán usar pidiendo un
+									time out en partida. O cartas que tendrán un efecto inmediato antes de iniciar la partida.
+								</li>
+								<li>Se contará con 3 time out por equipo, deben ser solicitados.</li>
+								<li>
+									Estar puntuales para sus partidas, esto con el fin de no atrasar los partido, estar con 10 minutos de antelacion o serán
+									descalificados.
+								</li>
+								<li>Cero toxicidad hacia los demás streamers, organización o cualquier miembro de la comunidad.</li>
+								<li>Unirse todos al discord y pedir rol de su equipo al organizador o staff.</li>
+								<li>
+									Realizar la inscripción del equipo por medio del siguiente link: https://play.toornament.com/es/tournaments/7134911539646291968/
+									antes del 25 de octubre.
+								</li>
+							</ul>
+						</div>
+						<div class="animation"></div>
+					</div>
+					<div class="carnalito__roca"><img src="./imagenes/roca--carnalito.png" alt="" /></div>
+					<div class="carnalito__img"><img src="./imagenes/carnalito.png" alt="" /></div>
+					<div class="tvc__logo__reglas"><img src="./imagenes/logobkblancreglas.png" alt="" /></div>
+				</div>
+			</main>
+			<footer>
+				<div class="footer__logo">
+					<img src="./imagenes/logobk.png" alt="" width="500" />
+				</div>
+				<div class="footer__texto__container">
+					<div class="footer__derechos">
+						<div><p>Todos los Derechos Reservados a TVC</p></div>
+						<div><p>@Copyright 2023-2024</p></div>
+					</div>
+					<div class="footer__contacto">
+						<div><p>Por cualquier duda contactar con la organizacion o a traves del discord del torneo.</p></div>
+						<div><p>Gracias por participar en TVC.</p></div>
+					</div>
+				</div>
+			</footer>
+			<script src="./js/app.js"></script>
+			<script type="module" src="./js/main.js"></script>
+		</div>
+		<div class="mobile__content">
+			<div class="vidrio__mobile"></div>
+			<img src="./imagenes/logobkblanc.png" alt="" class="logobk__mobile" />
+			<img src="./imagenes/phoenix__working.png" alt="" class="phoenix__mobile" />
+			<h3 class="mobile__title">No estamos disponibles en este dispositivo.</h3>
+			<div class="vignette"></div>
+		</div>
+	</body>
+</html>
