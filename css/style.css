@@ -488,6 +488,7 @@ header {
 .cartas__seccion {
 	height: 80vh;
 	display: flex;
+	align-items: center;
 	flex-direction: row;
 }
 .cartas__izquierda__poderes {
