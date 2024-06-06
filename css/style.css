@@ -874,7 +874,7 @@ footer {
 }
 /* Variables */
 :root {
-	--fuschia: #6e40a0;
+	--fuschia: #3c83d4;
 	--button-bg: var(--fuschia);
 
 	--fuschia2: #6e40a0;
@@ -941,7 +941,7 @@ footer {
 .boton__mezclar:active {
 	transform: scale(0.9);
 	background-color: darken(var(--button-bg), 5%);
-	box-shadow: 0 2px 25px rgba(255, 145, 0, 0.2);
+	box-shadow: 0 2px 25px rgba(0, 119, 255, 0.2);
 }
 
 .boton__mezclar.animate:before {
