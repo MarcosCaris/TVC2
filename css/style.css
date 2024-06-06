@@ -508,6 +508,9 @@ header {
 .cartas__seccion {
 	height: 80vh;
 	display: flex;
+	background-image: url(../imagenes/card_background.png);
+	background-size: cover;
+
 	align-items: center;
 	flex-direction: row;
 }
