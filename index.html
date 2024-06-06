@@ -99,7 +99,7 @@
 				<div class="">
 					<div class="servidores__titulo oculto">
 						<h3>Seleccion de Mapas</h3>
-						<p>A continuacion seleccione los mapas que desea utilizar en el sorteo de mapas y luego presione el boton de "Buscar Mapa".</p>
+						<p>A continuacion seleccione los mapas que desea utilizar en el sorteo de mapas y luego presione el boton de "Buscar" a la izquierda.</p>
 					</div>
 					<div id="tp__servidores" class="server__card__container">
 						<div class="glass__server__card oculto" onclick="toggleCard(this)">
@@ -149,10 +149,12 @@
 						<img src="./imagenes/Dyzzy.png" alt="" />
 					</div>
 				</div>
-				<div class="texto__seleccion">El mapa que se vuelva color celeste sera el ganador.</div>
-				<div class="buscar__container">
-					<div class="buscar__boton"><button onclick="elegirCartaRandom()">Buscar Mapa</button></div>
-					<div class="reiniciar"><button onclick="reiniciarSorteo()">Reiniciar</button></div>
+				<div class="texto__seleccion">El mapa que brille de color celeste sera el ganador.</div>
+				<div class="buscar__container oculto">
+					<div class="buscar__boton"><button onclick="elegirCartaRandom()">BUSCAR</button></div>
+				</div>
+				<div class="reiniciar__container oculto">
+					<div class="reiniciar"><button onclick="reiniciarSorteo()">REINICIAR</button></div>
 				</div>
 				<div class="cartas__seccion" id="tp__cartas">
 					<div class="vidrio"></div>
